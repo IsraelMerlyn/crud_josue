@@ -3,14 +3,25 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-
+import { ListaEmpleadoComponent } from './lista-empleado/lista-empleado.component';
+import { HttpClientModule } from "@angular/common/http";
+import { RegistrarEmpleadoComponent } from './registrar-empleado/registrar-empleado.component';
+import { FormsModule } from '@angular/forms';
+import { ActualizarEmpleadoComponent } from './actualizar-empleado/actualizar-empleado.component';
+import { DetalleEmpleadoComponent } from './detalle-empleado/detalle-empleado.component';
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    ListaEmpleadoComponent,
+    RegistrarEmpleadoComponent,
+    ActualizarEmpleadoComponent,
+    DetalleEmpleadoComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

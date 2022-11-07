@@ -1,0 +1,50 @@
+
+<div class="container py-5">
+    <div class="card-body py-5">
+        <button (click)="Listar()" class="btn btn-primary">Listar</button>
+    <button (click)="Nuevo()" class="btn btn-info  ms-3 " >Nuevo</button>
+    </div>
+    
+
+        <div class="card">
+            <div class="card-header">
+                <h4>Informacion de Usuarios</h4>
+            </div>
+        </div>
+        <div class="card-body">
+            <table class="table table-hover">
+                <thead class="">
+                    <tr class="">
+                        <th>Id</th>
+                        <th>Nombre</th>
+                        <th>Localidad</th>
+                        <th>Municipio</th>
+                        <th>C.P</th>
+                        <th>Pais</th>
+                        <th>Idiomas</th>
+                        <th>Opciones</th>
+
+                    </tr>
+                </thead> 
+                <tbody class="">
+                    <tr *ngFor="let empleado of empleados">
+                       <td> {{empleado.id}} </td>
+                       <td> {{empleado.nombre}}</td>
+                       <td> {{empleado.localidad}}</td>
+                       <td> {{empleado.municipio}}</td>
+                       <td> {{empleado.cp}}</td>
+                       <td> {{empleado.pais}}</td>
+                       <td> {{empleado.idoma}}</td>
+                        <td>
+                            <button (click)="actualizarEmpleado(empleado.id)" class="btn btn-warning"><i class="fa-solid fa-pen-to-square"></i></button>
+                            <button (click)="eliminarEmpleado(empleado.id)" class="btn btn-danger ms-3"> <i class="fa-solid fa-trash"></i></button>
+                            <button (click)="detalleEmpleado(empleado.id)"  class="btn btn-info ms-3"> <i class="fa-solid fa-eye"></i></button>
+                           
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+
+    </div>

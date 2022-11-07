@@ -1,0 +1,44 @@
+<div class="container">
+    <div class="col-md-6 offset-md-3">
+        <h3 class="text-center">Registro de Empleados</h3>
+        <form (ngSubmit)="onSubmit()" action="">
+            <div class="mb-3">
+              <label for="" class="form-label">Nombre:</label>
+              <input type="text" name="nombre" id="nombre" [(ngModel)]="empleado.nombre" class="form-control" placeholder="Ingrese el Nombre" aria-describedby="helpId" required   minlength="5"  maxlength="50" #nombre = "ngModel">
+
+              <div class="alert alert-danger" *ngIf="nombre.invalid && (nombre.dirty || nombre.touched)">
+                
+
+              </div>
+              
+            </div>
+            <div class="mb-3">
+                <label for="" class="form-label">Localidad:</label>
+                <input type="text" name="localidad" id="localidad" [(ngModel)]="empleado.localidad" class="form-control" placeholder="Ingrese la localidad" aria-describedby="helpId" required  required minlength="5"  maxlength="50">
+                
+              </div>
+              <div class="mb-3">
+                <label for="" class="form-label">Municipio:</label>
+                <input type="text" name="municipio" id="municipio" [(ngModel)]="empleado.municipio" class="form-control" placeholder="Ingrese el Municipio" aria-describedby="helpId" required minlength="5"  maxlength="50">
+                
+              </div>
+              <div class="mb-3">
+                <label for="" class="form-label">C.P:</label>
+                <input type="text" name="cp" id="cp" [(ngModel)]="empleado.cp" class="form-control" placeholder="Ingrese el C.P" aria-describedby="helpId" required minlength="5"  maxlength="50">
+                
+              </div>
+              <div class="mb-3">
+                <label for="" class="form-label">Pais:</label>
+                <input type="text" name="pais" id="pais" [(ngModel)]="empleado.pais" class="form-control" placeholder="Ingrese el Pais" aria-describedby="helpId" required minlength="5"  maxlength="50">
+                
+              </div>
+              <div class="mb-3">
+                <label for="" class="form-label">Idioma:</label>
+                <input type="text" name="idoma" id="idoma" [(ngModel)]="empleado.idoma" class="form-control" placeholder="Ingrese el Idioma" aria-describedby="helpId" required minlength="5"  maxlength="50">
+                
+              </div>
+              <button  class="btn btn-primary">Guardar</button>
+        </form>
+    </div>
+
+</div>
